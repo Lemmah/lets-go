@@ -2,14 +2,14 @@ package main
 
 import "fmt"
 
+/* This is the replacement of the while loop in many languages */
 func main() {
-	var plantCapacities []float64
-	plantCapacities = []float64{30, 30, 30, 60, 60, 100}
-	var capacity = plantCapacities[0] + plantCapacities[1] + plantCapacities[2] + plantCapacities[3] + plantCapacities[4] + plantCapacities[5]
-	var gridLoad = 75.
-	utilization := gridLoad / capacity
-	// Printf need *formatting patterns*
-	fmt.Printf("%-20s%.0f\n", "Capacity:", capacity)
-	fmt.Printf("%-20s%.0f\n", "Grid Load:", gridLoad)
-	fmt.Printf("%-20s%.1f%%\n", "Utilization:", utilization*100)
+	i := 0
+	for {
+		i++
+		fmt.Println(i)
+		if i > 10 {
+			break
+		}
+	}
 }
