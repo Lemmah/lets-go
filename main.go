@@ -1,15 +1,12 @@
 package main
 
-import "fmt"
-
 func main() {
-	var plantCapacities []float64
-	plantCapacities = []float64{30, 30, 30, 60, 60, 100}
-	var capacity = plantCapacities[0] + plantCapacities[1] + plantCapacities[2] + plantCapacities[3] + plantCapacities[4] + plantCapacities[5]
-	var gridLoad = 75.
-	utilization := gridLoad / capacity
-	// Printf need *formatting patterns*
-	fmt.Printf("%-20s%.0f\n", "Capacity:", capacity)
-	fmt.Printf("%-20s%.0f\n", "Grid Load:", gridLoad)
-	fmt.Printf("%-20s%.1f%%\n", "Utilization:", utilization*100)
+	/* Variatic params must always come last in the list of args */
+	sayHelloVariatic("Hello", "From", "Lemmah", "James")
+}
+
+func sayHelloVariatic(messages ...string) {
+	for _, message := range messages {
+		println(message)
+	}
 }
