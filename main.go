@@ -4,9 +4,6 @@ import "fmt"
 
 func main() {
 	/* Collections in Go */
-	myArray := [3]int{}
-	myArray[0] = 42
-	myArray[1] = 43
-	myArray[2] = 44
+	myArray := [...]int{42, 43, 44, 45}
 	fmt.Println(myArray)
 }
