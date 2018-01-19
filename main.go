@@ -12,4 +12,19 @@ func main() {
 			break
 		}
 	}
+
+	/* Looping through a slice */
+	mySlice := []string{"Lemmah", "James", "Go", "Annie"}
+	for index, value := range mySlice {
+		fmt.Println(index, value)
+	}
+
+	/* Looping through a map */
+	myMap := make(map[string]string)
+	myMap["Go Developer"] = "Lemmah"
+	myMap["Heart Beat"] = "Annie"
+	myMap["Home Village"] = "Maasai Mara"
+	for key, value := range myMap {
+		fmt.Println(key, value)
+	}
 }
