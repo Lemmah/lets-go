@@ -1,28 +1,12 @@
 package main
 
-/* Constants in Go */
-const (
-	first = 1 << (1 * iota)
-	second
-	third
-	fourth
-	fifth
-	sixth
-	seventh
-	eighth
-	nineth
-	tenth
-)
+import "fmt"
 
 func main() {
-	println(first)
-	println(second)
-	println(third)
-	println(fourth)
-	println(fifth)
-	println(sixth)
-	println(seventh)
-	println(eighth)
-	println(nineth)
-	println(tenth)
+	/* Collections in Go */
+	myArray := [3]int{}
+	myArray[0] = 42
+	myArray[1] = 43
+	myArray[2] = 44
+	fmt.Println(myArray)
 }
