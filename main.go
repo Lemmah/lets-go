@@ -4,7 +4,10 @@ import "fmt"
 
 func main() {
 	/* Collections in Go */
-	mySlice := []int{42, 43, 44, 45}
+	mySlice := make([]int, 100)
+	mySlice[0] = 43
+	mySlice[1] = 44
+	mySlice[2] = 45
 	mySlice = append(mySlice, 46)
 	fmt.Println(mySlice)
 }
