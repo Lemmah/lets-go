@@ -1,11 +1,23 @@
 package main
 
-import "fmt"
-
 func main() {
-	/* maps, dictionaries in go */
-	myMap := make(map[int]string)
-	myMap[1] = "Lemmah"
-	myMap[2] = "James"
-	fmt.Println(myMap)
+	// Addition
+	add := 2 + 2
+	println(add)
+	// Subtraction
+	sub := add - 3 // Quick math
+	println(sub)
+	// Muliplication
+	mult := add * add
+	println(mult)
+	// Modulous
+	modulo := add % sub
+	println(modulo)
+	// Augmented Assignment Operators
+	modulo += 2
+	println(modulo)
+	modulo *= 2
+	println(modulo)
+	modulo /= 2
+	println(modulo)
 }
