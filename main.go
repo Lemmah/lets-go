@@ -1,15 +1,22 @@
 package main
 
-import "fmt"
-
 func main() {
-	var plantCapacities []float64
-	plantCapacities = []float64{30, 30, 30, 60, 60, 100}
-	var capacity = plantCapacities[0] + plantCapacities[1] + plantCapacities[2] + plantCapacities[3] + plantCapacities[4] + plantCapacities[5]
-	var gridLoad = 75.
-	utilization := gridLoad / capacity
-	// Printf need *formatting patterns*
-	fmt.Printf("%-20s%.0f\n", "Capacity:", capacity)
-	fmt.Printf("%-20s%.0f\n", "Grid Load:", gridLoad)
-	fmt.Printf("%-20s%.1f%%\n", "Utilization:", utilization*100)
+	/* Pass by refrence vs Pass by Value */
+	/* Pass by refrence is what we're used to, passing a copy of say a variable into a function, the real variable is not manipulated by the func but rather a copy. */
+	/* Pass by value, you pass the memory address of the variable so it can be manipulated from within the function.*/
+
+	/* Examples: */
+	var message = "Lemmah"
+	passByRefrence(message)
+	println(message)
+	passByValue(&message)
+	println(message)
+}
+
+func passByRefrence(message string) {
+	message = "James Lemayian" // Does not change anything
+}
+
+func passByValue(message *string) {
+	*message = "James Lemayian" // The message is changed now!
 }
