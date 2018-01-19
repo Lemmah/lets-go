@@ -1,23 +1,15 @@
 package main
 
+import "fmt"
+
 func main() {
-	// Addition
-	add := 2 + 2
-	println(add)
-	// Subtraction
-	sub := add - 3 // Quick math
-	println(sub)
-	// Muliplication
-	mult := add * add
-	println(mult)
-	// Modulous
-	modulo := add % sub
-	println(modulo)
-	// Augmented Assignment Operators
-	modulo += 2
-	println(modulo)
-	modulo *= 2
-	println(modulo)
-	modulo /= 2
-	println(modulo)
+	var plantCapacities []float64
+	plantCapacities = []float64{30, 30, 30, 60, 60, 100}
+	var capacity float64 = plantCapacities[0] + plantCapacities[1] + plantCapacities[2] + plantCapacities[3] + plantCapacities[4] + plantCapacities[5]
+	var gridLoad = 75.
+	utilization := gridLoad / capacity
+	// Printf need *formatting patterns*
+	fmt.Printf("%-20s%.0f\n", "Capacity:", capacity)
+	fmt.Printf("%-20s%.0f\n", "Grid Load:", gridLoad)
+	fmt.Printf("%-20s%.1f%%\n", "Utilization:", utilization*100)
 }
