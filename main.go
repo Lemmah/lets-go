@@ -3,13 +3,29 @@ package main
 import "fmt"
 
 func main() {
-	var plantCapacities []float64
-	plantCapacities = []float64{30, 30, 30, 60, 60, 100}
-	var capacity = plantCapacities[0] + plantCapacities[1] + plantCapacities[2] + plantCapacities[3] + plantCapacities[4] + plantCapacities[5]
-	var gridLoad = 75.
-	utilization := gridLoad / capacity
-	// Printf need *formatting patterns*
-	fmt.Printf("%-20s%.0f\n", "Capacity:", capacity)
-	fmt.Printf("%-20s%.0f\n", "Grid Load:", gridLoad)
-	fmt.Printf("%-20s%.1f%%\n", "Utilization:", utilization*100)
+	fmt.Println("Input a number:")
+	var myNumber int
+	fmt.Scanln(&myNumber)
+	fizzOrBuzz := divisibilityTest(myNumber)
+	switch fizzOrBuzz {
+	case 1:
+		fmt.Println("FizzBuzz")
+	case 2:
+		fmt.Println("Buzz")
+	case 3:
+		fmt.Println("Fizz")
+	default:
+		fmt.Println(myNumber)
+	}
+}
+
+func divisibilityTest(number int) int {
+	if number%5 == 0 && number%3 == 0 {
+		return 1
+	} else if number%5 == 0 {
+		return 2
+	} else if number%3 == 0 {
+		return 3
+	}
+	return 0
 }
