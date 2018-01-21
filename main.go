@@ -2,8 +2,7 @@ package main
 
 func main() {
 	// Creating an object in the local memory stac
-	foo := myStruct{}
-	foo.myField = "bar"
+	foo := myStruct{"bar"}
 	println(foo.myField)
 }
 
