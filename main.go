@@ -1,8 +1,9 @@
 package main
 
 func main() {
-	// Creating an object in the local memory stac
-	foo := myStruct{"bar"}
+	// It's recommended to create objects on the heap
+	foo := new(myStruct)
+	foo.myField = "bar"
 	println(foo.myField)
 }
 
