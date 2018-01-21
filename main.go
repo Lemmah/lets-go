@@ -17,7 +17,8 @@ func main() {
 		generatePlantCapacityReport(plantCapacities...)
 	case 2:
 		capacity := 0.
-		generateGridLoadReport(capacity, gridLoad, activePlants, plantCapacities)
+		generateGridLoadReport(
+			capacity, gridLoad, activePlants, plantCapacities)
 	default:
 		fmt.Printf("Invalid Option: %d\n", option)
 	}
@@ -29,7 +30,9 @@ func generatePlantCapacityReport(plantCapacities ...float64) {
 	}
 }
 
-func generateGridLoadReport(capacity float64, gridLoad float64, activePlants []int, plantCapacities []float64) {
+func generateGridLoadReport(
+	capacity float64, gridLoad float64,
+	activePlants []int, plantCapacities []float64) {
 	for _, plantID := range activePlants {
 		capacity += plantCapacities[plantID]
 	}
